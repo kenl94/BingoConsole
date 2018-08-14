@@ -1,1 +1,1 @@
-# Sparta-Bingo-Console
+# Sparta-Bingo
