@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoConsole", "BingoConsole\BingoConsole.csproj", "{EC34F9C3-1C86-4C62-946D-AAF1C426F01D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC34F9C3-1C86-4C62-946D-AAF1C426F01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC34F9C3-1C86-4C62-946D-AAF1C426F01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC34F9C3-1C86-4C62-946D-AAF1C426F01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC34F9C3-1C86-4C62-946D-AAF1C426F01D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8DB19C8-5621-48D9-9D2A-5DC82EB7EA2C}
+	EndGlobalSection
+EndGlobal
