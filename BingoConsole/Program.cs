@@ -12,20 +12,35 @@ namespace BingoConsole
         {
             List<int> RandomBingo = new List<int>();
             Random num = new Random();
-            // Find out the Users Name
+
             Console.WriteLine("What's your name?");
             string name = Console.ReadLine();
-            // Name is found, says hello
-            Console.WriteLine("Welcome to Bingo " + name);
 
-            // Random Number
+            Console.WriteLine("Welcome to Bingo " + name);
 
             Console.WriteLine("In this Bingo game, you only have to match 5 of the 10 numbers, choose numbers from 1 to 25");
 
             //string[,] playersChoices = new string[5,5];
             //int[,] playersNummbers = Int32.Parse(playersChoices);
 
-            List<int> playerBingoCard = new List<int>() { 3, 11, 13, 17, 23 };
+            List<int> playerBingoCard = new List<int>();
+            Console.WriteLine("Please select 5 number which will go in the order you have input for the first row");
+            string[] input1 = Console.ReadLine().Split(',');
+
+
+            for (int i = 0; i < input1.Length; i++)
+            {
+                playerBingoCard.Add(Int32.Parse(input1[i]));
+                if (input1.Length > 5)
+                {
+                    Console.WriteLine("You've entered too many numbers");
+                }
+            }
+            for (int i = 0; i < playerBingoCard.Count; i++)
+            {
+                Console.WriteLine("number in the grid is as follows from left to right " + playerBingoCard[i]);
+            }
+
 
             while (RandomBingo.Count < 10)
             {
@@ -41,16 +56,15 @@ namespace BingoConsole
             RandomBingo.Sort();
             for (int i = 0; i < RandomBingo.Count; i++)
             {
-                Console.WriteLine("Number is "+ RandomBingo[i]);
+                Console.WriteLine("Number is " + RandomBingo[i]);
                 for (int j = 0; j < playerBingoCard.Count; j++)
                 {
                     if (RandomBingo[i] == playerBingoCard[j])
                     {
-                    Console.WriteLine("Players number " + playerBingoCard[j]);
+                        Console.WriteLine("Players number " + playerBingoCard[j]);
                     }
                 }
             }
-
 
 
             Console.ReadLine();
