@@ -41,6 +41,9 @@ namespace BingoConsole
                 Console.WriteLine("number in the grid is as follows from left to right " + playerBingoCard[i]);
             }
 
+            // Check that it is only inputting one number in an array
+
+            // Console.WriteLine(playerBingoCard[1]);
 
             while (RandomBingo.Count < 10)
             {
