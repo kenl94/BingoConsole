@@ -20,59 +20,78 @@ namespace BingoConsole
 
             Console.WriteLine("In this Bingo game, you only have to match 5 of the 10 numbers, choose numbers from 1 to 25");
 
-            //string[,] playersChoices = new string[5,5];
             //int[,] playersNummbers = Int32.Parse(playersChoices);
 
-            List<int> playerBingoCard = new List<int>();
-            Console.WriteLine("Please select 5 number which will go in the order you have input for the first row");
-            string[] input1 = Console.ReadLine().Split(',');
+            //List<int> playerBingoCard = new List<int>();
+            //Console.WriteLine("Please select 5 number which will go in the order you have input for the first row");
+            //string[] input1 = Console.ReadLine().Split(',');
 
+            int row = 5;
+            int column = 5;
 
-            for (int i = 0; i < input1.Length; i++)
+            int[][] playersChoices = new int[row][];
+            for (int i = 0; i < row; i++)
             {
-                playerBingoCard.Add(Int32.Parse(input1[i]));
-                if (input1.Length > 5)
+                
+                for (int j = 0; j < column; j++)
                 {
-                    Console.WriteLine("You've entered too many numbers");
+                    int playerRnd = num.Next(1, 25);
+                    Console.Write(playersChoices[i][j] + " ");
                 }
+                Console.WriteLine();
             }
-            for (int i = 0; i < playerBingoCard.Count; i++)
-            {
-                Console.WriteLine("number in the grid is as follows from left to right " + playerBingoCard[i]);
-            }
+            Console.ReadLine();
+
+
+
+
+            //for (int i = 0; i < input1.Length; i++)
+            //{
+            //    playerBingoCard.Add(Int32.Parse(input1[i]));
+            //    if (input1.Length > 5)
+            //    {
+            //        Console.WriteLine("You've entered too many numbers");
+            //    }
+            //}
+            //for (int i = 0; i < playerBingoCard.Count; i++)
+            //{
+            //    Console.WriteLine("number in the grid is as follows from left to right " + playerBingoCard[i]);
+            //}
 
             // Check that it is only inputting one number in an array
 
             // Console.WriteLine(playerBingoCard[1]);
 
-            while (RandomBingo.Count < 10)
-            {
-                int rnd = num.Next(1, 25);
-                if (!RandomBingo.Contains(rnd))
-                {
-                    RandomBingo.Add(rnd);
-                    Console.WriteLine(rnd);
-                }
+            //while (RandomBingo.Count < 10)
+            //{
+            //    int rnd = num.Next(1, 25);
 
-            }
-            // If you want to see if the numbers are all different
-            RandomBingo.Sort();
-            for (int i = 0; i < RandomBingo.Count; i++)
-            {
-                Console.WriteLine("Number is " + RandomBingo[i]);
-                for (int j = 0; j < playerBingoCard.Count; j++)
-                {
-                    if (RandomBingo[i] == playerBingoCard[j])
-                    {
-                        Console.WriteLine("Players number " + playerBingoCard[j]);
-                    }
-                }
-            }
+            //    if (!RandomBingo.Contains(rnd))
+            //    {
+            //        RandomBingo.Add(rnd);
+            //        Console.WriteLine(rnd);
+            //    }
 
-
-            Console.ReadLine();
+            //}
+            //// If you want to see if the numbers are all different
+            //RandomBingo.Sort();
+            //for (int i = 0; i < RandomBingo.Count; i++)
+            //{
+            //    Console.WriteLine("Number is " + RandomBingo[i]);
+            //    for (int j = 0; j < playerBingoCard.Count; j++)
+            //    {
+            //        if (RandomBingo[i] == playerBingoCard[j])
+            //        {
+            //            Console.WriteLine("Players number " + playerBingoCard[j]);
+            //        }
+            //    }
+            //}
 
 
+            //Console.ReadLine();
+
+            //Create 5 arrays with different numbers within an array and loop through to check with || to make sure all numbers are random. 
+            // populate the number first instead of user input
         }
     }
 }
