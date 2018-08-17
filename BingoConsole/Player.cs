@@ -11,5 +11,6 @@ namespace BingoConsole
         public string player { get; set; }
 
         public int[] setOfNumbers;
+        public List<int> matchingNumbers;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BingoConsole
 {
-   public class BingoNumbers
+    public class BingoNumbers
     {
         public List<int> RandomBingo = new List<int>();
         Random num = new Random();
@@ -15,7 +15,7 @@ namespace BingoConsole
         {
             while (RandomBingo.Count < 50)
             {
-                int rnd = num.Next(1, 100);
+                int rnd = num.Next(1, 75);
 
                 if (!RandomBingo.Contains(rnd))
                 {
