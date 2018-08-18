@@ -10,8 +10,8 @@ namespace BingoConsole
 {
     class WinCondition
     {
-        Player name = new Player();
-        BingoNumbers randomise = new BingoNumbers();
+       Player name = new Player();
+       BingoNumbers randomise = new BingoNumbers();
         
 
 
@@ -34,10 +34,7 @@ namespace BingoConsole
                     if (randomise.RandomBingo[i] == name.setOfNumbers[j])
                     {
                         name.matchingNumbers.Add(name.setOfNumbers[j]);
-
                     }
-                    // randomise.RandomBingo.Sort();
-                    // Console.WriteLine(randomise.RandomBingo[i]);
                 }
             }
 

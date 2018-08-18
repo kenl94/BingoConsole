@@ -13,30 +13,39 @@ namespace BingoConsole
     {
         public static void Main()
         {
-
-
-
-
+            
 
             Player nameOfPlayer = new Player();
             WinCondition WinOrLose = new WinCondition();
-
 
             Console.WriteLine("What's your name?");
             nameOfPlayer.player = Console.ReadLine();
 
             Console.WriteLine("Welcome to Bingo " + nameOfPlayer.player);
 
-            Console.WriteLine("In this Bingo game, you only have to match 5, when you're ready for the numbers press space!");
 
-            WinOrLose.Win();
+                Console.WriteLine("In this Bingo game, you only have to match 5, when you're ready for the numbers press space!");
 
-           // Console.Write("Play again?");
+            while (true)
+            {
 
+                WinOrLose.Win();
+                
 
-            Console.ReadLine();
+                Console.Write("Play again?");
 
+                string playagain = Console.ReadLine().ToLower();
 
+                if (playagain == "y")
+                {
+                    Main();
+                }
+                else if (playagain == "n")
+                {
+                    return;
+                }
+
+            }
         }
     }
 }
