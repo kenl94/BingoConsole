@@ -13,8 +13,14 @@ namespace BingoConsole
     {
         public static void Main()
         {
+
+
+
+
+
             Player nameOfPlayer = new Player();
-            BingoNumbers randomise = new BingoNumbers();
+            WinCondition WinOrLose = new WinCondition();
+
 
             Console.WriteLine("What's your name?");
             nameOfPlayer.player = Console.ReadLine();
@@ -23,48 +29,14 @@ namespace BingoConsole
 
             Console.WriteLine("In this Bingo game, you only have to match 5, when you're ready for the numbers press space!");
 
+            WinOrLose.Win();
 
-            
-            nameOfPlayer.matchingNumbers = new List<int>();
+           // Console.Write("Play again?");
 
-            Console.WriteLine("Your numbers are: \n");
-            for (int k = 0; k < nameOfPlayer.setOfNumbers.Length; k++)
-            {
-                Console.Write(nameOfPlayer.setOfNumbers[k] + ", ");
-            }
-            Console.WriteLine("\n" + "\n");
-            randomise.randomNumbers();
-            
 
-            for (int i = 0; i < randomise.RandomBingo.Count; i++)
-            {
-                for (int j = 0; j < nameOfPlayer.setOfNumbers.Length; j++)
-                {
-                    if (randomise.RandomBingo[i] == nameOfPlayer.setOfNumbers[j])
-                    {
-                        nameOfPlayer.matchingNumbers.Add(nameOfPlayer.setOfNumbers[j]);
-
-                    }
-                    // randomise.RandomBingo.Sort();
-                    // Console.WriteLine(randomise.RandomBingo[i]);
-                }
-            }
-            Console.WriteLine("");
-            for (int i = 0; i < nameOfPlayer.matchingNumbers.Count; i++)
-            {
-                Console.WriteLine("Match of " + nameOfPlayer.matchingNumbers[i]);
-            }
-
-            if (nameOfPlayer.matchingNumbers.Count == nameOfPlayer.setOfNumbers.Length)
-            {
-                Console.WriteLine("Bingo");
-            }
-            else
-            {
-                Console.WriteLine("Better luck next time");
-            }
-            // Console.Write("Play again?");
             Console.ReadLine();
+
+
         }
     }
 }

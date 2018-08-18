@@ -13,6 +13,6 @@ namespace BingoConsolePlayers
         public int[] setOfNumbers = new int[] { 3, 7, 13, 15, 19 };
         public List<int> matchingNumbers;
 
-        
-}
+
+    }
 }
