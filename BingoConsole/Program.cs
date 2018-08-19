@@ -32,7 +32,7 @@ namespace BingoConsole
                 WinOrLose.Win();
                 
 
-                Console.Write("Type [Y] To play again, otherwise any other key to exit");
+                Console.WriteLine("Type [Y] To play again, otherwise any other key to exit");
 
                 string playagain = Console.ReadLine().ToLower();
 
