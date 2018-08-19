@@ -18,7 +18,7 @@ namespace BingoConsoleNumbers
         {
             while (RandomBingo.Count < 10)
             {
-                int rnd = num.Next(1, 20);
+                int rnd = num.Next(1, 15);
                 if (Console.ReadKey().Key == ConsoleKey.Spacebar)
                 {
                     if (!RandomBingo.Contains(rnd))
