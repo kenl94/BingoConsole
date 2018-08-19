@@ -25,18 +25,22 @@ namespace BingoConsole
 
 
             Console.WriteLine("In this Bingo game, you only have to match 5, when you're ready for the numbers press space!");
+
             for (int i = 0; i < 5; i++)
             {
-                nameOfPlayer.setOfNumbers2[i] = new int[5] { number.Next(1, 15), number.Next(16, 30), number.Next(31, 45), number.Next(46, 60), number.Next(61, 75) };
-
                 for (int j = 0; j < 5; j++)
                 {
-                    
+                    int oneToFifteen = number.Next(1, 15);
+                    int sixteenToThirty = number.Next(16, 30);
+                    int thirtyOneToFourtyFive= number.Next(31, 45);
+                    int fourtySixToSixty = number.Next(46, 60);
+                    int sixtyOneToSeventyFive = number.Next(61, 75);
+
+                    nameOfPlayer.setOfNumbers2[i] = new int[5] { oneToFifteen, sixteenToThirty, thirtyOneToFourtyFive, fourtySixToSixty, sixtyOneToSeventyFive };
+
                     Console.Write(nameOfPlayer.setOfNumbers2[i][j] + ",");
                 }
-
                 Console.WriteLine();
-
             }
 
 
