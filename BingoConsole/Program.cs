@@ -20,6 +20,7 @@ namespace BingoConsole
             while (true)
             {
                 nameOfPlayer.getName();
+                nameOfPlayer.multi();
                 WinOrLose.Win();
 
                 Console.WriteLine("Type [Y] To play again, otherwise any other key to exit");

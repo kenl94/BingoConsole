@@ -16,7 +16,8 @@ namespace BingoConsolePlayers
         public int[] playerTwoNumbers = new int[] { 2, 5, 8, 11, 14 };
         public List<int> playerMatchingNumbers;
         public List<int> computerMatchingNumbers;
-        public int[][] setOfNumbers2 = new int [5][];
+        public int[][] setOfNumbers2 = new int[5][];
+        public int[,] multiDim = new int[5, 5];
 
 
         public void getName()
@@ -49,7 +50,29 @@ namespace BingoConsolePlayers
         //        Console.WriteLine();
         //    }
         //}
+
+        public void multi()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    int oneToFifteen = number.Next(1, 15);
+                    int sixteenToThirty = number.Next(16, 30);
+                    int thirtyOneToFourtyFive = number.Next(31, 45);
+                    int fourtySixToSixty = number.Next(46, 60);
+                    int sixtyOneToSeventyFive = number.Next(61, 75);
+                    multiDim[i, j] = number.Next(1, 15);
+                    Console.Write(multiDim[i,j] + ",");
+
+                }
+
+                Console.WriteLine();
+
+            }
+
+        }
     }
 }
- 
- 
+
+
