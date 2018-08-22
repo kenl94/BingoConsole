@@ -18,7 +18,7 @@ namespace BingoConsolePlayers
         public List<int> computerMatchingNumbers;
         public int[][] setOfNumbers2 = new int[5][];
         public int[,] multiDim = new int[5, 5];
-
+   
 
         public void getName()
         {
@@ -31,27 +31,7 @@ namespace BingoConsolePlayers
             Console.WriteLine("In this Bingo game, you only have to match 5, when you're ready for the numbers press space!");
         }
 
-        //public void jaggedArray()
-        //{
-        //    for (int i = 0; i < 5; i++)
-        //    {
-        //        for (int j = 0; j < 5; j++)
-        //        {
-        //            int oneToFifteen = number.Next(1, 15);
-        //            int sixteenToThirty = number.Next(16, 30);
-        //            int thirtyOneToFourtyFive = number.Next(31, 45);
-        //            int fourtySixToSixty = number.Next(46, 60);
-        //            int sixtyOneToSeventyFive = number.Next(61, 75);
-
-        //            setOfNumbers2[i] = new int[5] { oneToFifteen, sixteenToThirty, thirtyOneToFourtyFive, fourtySixToSixty, sixtyOneToSeventyFive };
-
-        //            Console.Write(setOfNumbers2[i][j] + ",");
-        //        }
-        //        Console.WriteLine();
-        //    }
-        //}
-
-        public void multi()
+        public void jaggedArray()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -62,16 +42,36 @@ namespace BingoConsolePlayers
                     int thirtyOneToFourtyFive = number.Next(31, 45);
                     int fourtySixToSixty = number.Next(46, 60);
                     int sixtyOneToSeventyFive = number.Next(61, 75);
-                    multiDim[i, j] = number.Next(1, 15);
-                    Console.Write(multiDim[i,j] + ",");
 
+                    setOfNumbers2[i] = new int[5] { oneToFifteen, sixteenToThirty, thirtyOneToFourtyFive, fourtySixToSixty, sixtyOneToSeventyFive };
+
+                    Console.Write(setOfNumbers2[i][j] + ",");
                 }
-
                 Console.WriteLine();
-
             }
-
         }
+
+        //public void multi()
+        //{
+        //    for (int i = 0; i < 5; i++)
+        //    {
+        //        for (int j = 0; j < 5; j++)
+        //        {
+        //            int oneToFifteen = number.Next(1, 15);
+        //            int sixteenToThirty = number.Next(16, 30);
+        //            int thirtyOneToFourtyFive = number.Next(31, 45);
+        //            int fourtySixToSixty = number.Next(46, 60);
+        //            int sixtyOneToSeventyFive = number.Next(61, 75);
+        //            multiDim[i, j] = number.Next(1, 15);
+        //            Console.Write(multiDim[i, j] + ",");
+
+        //        }
+
+        //        Console.WriteLine();
+
+        //    }
+
+        //}
     }
 }
 
